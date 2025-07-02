@@ -1,130 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Akshat Gupta - DevOps Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-          font-family: 'Segoe UI', sans-serif;
-          margin: 0;
-          padding: 40px;
-          background-color: #f4f4f4;
-          color: #333;
-          line-height: 1.6;
-        }
-        h1, h2, h3 {
-          color: #003366;
-        }
-        .section {
-          margin-bottom: 30px;
-        }
-        .contact, .skills, .languages, .hobbies {
-          list-style-type: none;
-          padding-left: 0;
-        }
-        .project-title {
-          font-weight: bold;
-        }
-        a {
-          color: #0066cc;
-          text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>CV - Akshat</title>
+  <meta name="description" content="Akshat Gupta | DevOps Engineer">
+  <link rel="icon" href="./img/cvimg.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <header>
+    <div><img src="./img/profile_pic.jpeg" /></div>
+    <h1>Akshat Gupta</h1>
+    <section>
+      <p>DevOps Engineer with 3+ years of experience in CI/CD, automation, and cloud-native tooling.</p>
+      <a href="mailto:akshatgupta276@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+      <a href="tel:7786987980" target="_top"><i class="fa fa-phone"></i></a>
+      <a href="https://github.com/akshat276" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/akshat-gupta-254372201" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </section>
+  </header>
 
-<h1>Akshat Gupta</h1>
-<p>DevOps Engineer with 3+ years of experience in CI/CD, automation, and cloud-native tooling.</p>
-<ul class="contact">
-    <li>Email: <a href="mailto:akshatgupta276@gmail.com">akshatgupta276@gmail.com</a></li>
-    <li>Phone: 7786987980</li>
-    <li>Location: Kanpur, India</li>
-    <li>GitHub: <a href="https://github.com/akshat276">github.com/akshat276</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/akshat-gupta-254372201">linkedin.com/in/akshat-gupta-254372201</a></li>
-</ul>
+  <main>
+    <section>
+      <h3>Education</h3>
+      <article class='course'>
+        <h4>Vellore Institute of Technology</h4>
+        <p>Master of Computer Application (MCA) – CGPA: 9.2 (2021–2023)</p>
+      </article>
+      <article class='course'>
+        <h4>Integral University</h4>
+        <p>Bachelor of Computer Application (BCA) – 82.2% (2018–2021)</p>
+      </article>
+    </section>
 
-<div class="section">
-    <h2>Experience</h2>
+    <section>
+      <h3>Projects</h3>
+      <div class="row">
+        <div class="column">
+          <div class="container">
+            <img src="img/data mining.webp" alt="Gyan Hub" class="image" style="width:100%">
+            <div class="middle">
+              <div class="text">Gyan Hub Website – Platform for student-institution interaction.</div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="container">
+            <img src="img/blog_image.jpg" alt="Investment Tracker" class="image" style="width:100%">
+            <div class="middle">
+              <div class="text">Investment Tracker App – Track investments and get maturity alerts.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="container">
+          <img src="img/data_mining.png" alt="Sentiment Analysis" class="image" style="width:100%">
+          <div class="middle">
+            <div class="text">Sentiment Analysis of Alexa Reviews – VADER-based analysis of user feedback.</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h3>Senior Engineer – DevOps, Nokia Networks</h3>
-    <p><em>Aug 2024 – Present</em></p>
-    <ul>
-        <li>Automated health checks using Python in Kubernetes environments.</li>
-        <li>Managed CI/CD with Jenkins and GitLab CI.</li>
-        <li>Wrote automation for Git branching workflows.</li>
-        <li>Maintained Helm charts and Maven POM files.</li>
-        <li>Uploaded and managed artifacts via JFrog with automation.</li>
-        <li>Provisioned and cleaned up resources using Ansible and Python.</li>
-    </ul>
+    <section>
+      <h3>Skills</h3>
+      <div class='skills'>
+        <div class='column'>
+          <h4>DevOps & Tools</h4>
+          <ul>
+            <li>Jenkins, GitLab CI, Git</li>
+            <li>Docker, Kubernetes</li>
+            <li>Ansible, Terraform</li>
+            <li>JFrog, Helm</li>
+          </ul>
+        </div>
+        <div class='column'>
+          <h4>Programming & Scripting</h4>
+          <ul>
+            <li>Python, Shell</li>
+            <li>Java, C</li>
+            <li>SQL, Data Structures</li>
+          </ul>
+        </div>
+        <div class='column'>
+          <h4>Monitoring</h4>
+          <ul>
+            <li>ELK Stack, OpenSearch</li>
+            <li>FluentBit, Grafana</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Languages</h4>
+          <p>Hindi – Native</p>
+          <p>English – Fluent</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>Associate DevOps Engineer, Nokia Networks</h3>
-    <p><em>Jul 2023 – Aug 2024</em></p>
-    <ul>
-        <li>Deployed containers via Docker and Kubernetes.</li>
-        <li>Parsed Jenkins logs for ELK stack.</li>
-        <li>Wrote Helm deployment and JFrog automation scripts.</li>
-    </ul>
+    <section>
+      <h3>Small Works</h3>
+      <article>
+        <strong>Deadlock Detection Program</strong>
+        <ul class="job-description">
+          <li>Built in Python using Chandy-Misra-Haas algorithm for dining philosopher problem.</li>
+        </ul>
+      </article>
+      <article>
+        <strong>CV Website</strong>
+        <ul class="job-description">
+          <li>Static HTML & CSS-based portfolio website.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
 
-    <h3>DevOps Intern, Nokia Networks</h3>
-    <p><em>Sep 2022 – Jun 2023</em></p>
-    <ul>
-        <li>Streamed Jenkins logs to Elasticsearch using Filebeat.</li>
-        <li>Worked with Docker, Jenkins, Maven, Ansible.</li>
-        <li>Used Gerrit and Artifactory for versioning and storage.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Education</h2>
-    <ul>
-        <li><strong>MCA</strong>, VIT (2021 – Present) – 9 CGPA</li>
-        <li><strong>BCA</strong>, Integral University (2018 – 2021) – 82.2%</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Skills</h2>
-    <ul class="skills">
-        <li><strong>DevOps Tools:</strong> Jenkins, GitLab CI, Docker, Kubernetes</li>
-        <li><strong>Cloud & IaC:</strong> AWS, Terraform, Ansible</li>
-        <li><strong>Programming:</strong> Python, Shell, Java, C</li>
-        <li><strong>Monitoring:</strong> ELK, FluentBit, Grafana, OpenSearch</li>
-        <li><strong>VCS & Repo:</strong> Git, GitHub, GitLab, Bitbucket, Gerrit</li>
-        <li><strong>OS:</strong> Linux, Bash, Systemd</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Personal Projects</h2>
-    <ul>
-        <li><span class="project-title">Gyan Hub:</span> A web portal to connect students and institutions.</li>
-        <li><span class="project-title">Alexa Review Sentiment Analysis:</span> VADER-based sentiment analysis.</li>
-        <li><span class="project-title">Investment Tracker App and Web:</span> Tool to track investments and send reminders.</li>
-    </ul>
-    <h3>Small Work</h3>
-    <ul>
-        <li>Deadlock Detection (2021) – Chandy-Misra-Haas algorithm in Python.</li>
-        <li>CV Website (2021) – Static HTML & CSS site.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Languages</h2>
-    <ul class="languages">
-        <li>English – Professional Working Proficiency</li>
-        <li>Hindi – Full Professional Proficiency</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Hobbies</h2>
-    <ul class="hobbies">
-        <li>Travelling</li>
-        <li>Learning new skills</li>
-        <li>Gathering knowledge</li>
-    </ul>
-</div>
-
+  <footer></footer>
 </body>
 </html>
