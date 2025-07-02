@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,135 +5,81 @@
 }
 
 body {
-  margin: 0;
-  font-family: 'Roboto Slab', serif;
-  font-size: 16px;
-  line-height: 1.8em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
-}
-
-a {
-  color: #1C9C94;
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-header, main, footer {
-  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  padding: 4em 1em;
   text-align: center;
-  background: linear-gradient(to bottom, #2d3436 0%, #000000 74%);
-  color: white;
-}
-
-header section {
-  margin: 0 auto;
-  max-width: 640px;
+  padding: 20px 0;
 }
 
 header img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  max-width: 200px;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
-h1 {
-  text-transform: uppercase;
-  margin: 1em 0 0.5em;
+header h1 {
   font-size: 2em;
+  margin-bottom: 10px;
+  color: #003366;
 }
 
-h3 {
-  text-transform: uppercase;
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 4px;
-  color: #005599;
-}
-
-h4 {
-  font-weight: bold;
-  margin-bottom: 0.2em;
-  font-size: 1.1em;
-}
-
-section {
-  margin: 1.5em 0;
-  padding: 1em;
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+header section i {
+  font-size: 18px;
+  margin: 0 10px;
+  color: #003366;
 }
 
 main {
-  max-width: 1140px;
-  padding: 1em;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.fab, .fa {
-  border: 1px solid white;
-  border-radius: 50%;
-  font-size: 1.2em;
-  width: 1.5em;
-  height: 1.5em;
-  line-height: 1.5em;
-  margin: 5px;
-  text-align: center;
-  color: white;
+section {
+  margin-bottom: 30px;
 }
 
-.course, .skills {
+h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #005599;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.course, .skills .column, .job-title, article {
+  margin-bottom: 15px;
+}
+
+.course h4 {
+  font-size: 16px;
+  color: #222;
+}
+
+.skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
-}
-
-.course .title {
-  flex: 1 1 30%;
-  color: #509e98;
-}
-
-.course .descrition {
-  flex: 1 1 65%;
-}
-
-.course .descrition p {
-  padding-left: 1em;
+  gap: 30px;
 }
 
 .skills .column {
-  flex: 1 1 45%;
+  flex: 1 1 250px;
 }
 
-.skills .column ul,
-ul.job-description {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.skills .column ul > li::before {
-  content: "►";
-  padding-right: 0.5em;
-  color: #509e98;
-}
-
-ul.job-description li::before {
-  content: "✔";
-  padding-right: 0.5em;
-  color: #509e98;
-}
-
-.school span, .job-title span {
-  color: #889499;
-  text-decoration: underline;
+.skills ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
 .row {
@@ -145,8 +89,7 @@ ul.job-description li::before {
 }
 
 .column {
-  flex: 1 1 45%;
-  padding: 5px;
+  flex: 1 1 250px;
   position: relative;
 }
 
@@ -156,26 +99,24 @@ ul.job-description li::before {
 }
 
 .image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: 0.5s ease;
   display: block;
-  opacity: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 .middle {
   position: absolute;
-  top: 30%;
-  left: 15%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
   opacity: 0;
-  transition: 0.5s ease;
-  text-align: center;
-}
-
-.container:hover .image {
-  opacity: 0.2;
+  transition: .3s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
 }
 
 .container:hover .middle {
@@ -183,43 +124,19 @@ ul.job-description li::before {
 }
 
 .text {
-  color: black;
-  font-size: 15px;
-  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   padding: 10px;
-  background-color: rgba(255,255,255,0.85);
-  border-radius: 6px;
 }
 
 footer {
-  padding: 1em 1.5em;
-  background: #A7B8BF;
-  color: white;
-  text-align: right;
-  margin-top: 2em;
-  border-top: 2px solid #ccc;
-}
-
-@media only screen and (max-width: 768px) {
-  .course, .skills {
-    flex-direction: column;
-  }
-
-  .skills .column,
-  .course .title,
-  .course .descrition {
-    flex: 1 1 100%;
-  }
-
-  .image {
-    height: 200px;
-  }
-
-  header img {
-    max-width: 150px;
-  }
-
-  footer {
-    text-align: center;
-  }
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
 }
