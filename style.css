@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', serif;
   font-size: 16px;
   line-height: 1.8em;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 a {
@@ -13,16 +21,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.5;
-}
-
-article {
-  padding:0 1em;
-}
-
-section{
-  margin: 1em;
-  padding: 1em;
+  opacity: 0.7;
 }
 
 header, main, footer {
@@ -30,12 +29,9 @@ header, main, footer {
 }
 
 header {
-  padding: 4em;
+  padding: 4em 1em;
   text-align: center;
-  background-color: #2d3436;
-  background-image: linear-gradient(to bottom, #2d3436 0%, #000000 74%);
-  background-size: cover;
-  background-position: fixed;
+  background: linear-gradient(to bottom, #2d3436 0%, #000000 74%);
   color: white;
 }
 
@@ -44,66 +40,71 @@ header section {
   max-width: 640px;
 }
 
-
 header img {
   border-radius: 50%;
   max-width: 200px;
+  object-fit: cover;
 }
 
 h1 {
   text-transform: uppercase;
-  margin: 1em 0;
+  margin: 1em 0 0.5em;
+  font-size: 2em;
 }
 
 h3 {
   text-transform: uppercase;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 4px;
+  color: #005599;
 }
 
-h3, h4 {
+h4 {
   font-weight: bold;
+  margin-bottom: 0.2em;
+  font-size: 1.1em;
+}
+
+section {
+  margin: 1.5em 0;
+  padding: 1em;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 main {
   max-width: 1140px;
+  padding: 1em;
 }
 
-main section:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-}
-
-.fab,.fa {
+.fab, .fa {
   border: 1px solid white;
   border-radius: 50%;
-  font-size: 1.5em;
+  font-size: 1.2em;
   width: 1.5em;
   height: 1.5em;
   line-height: 1.5em;
   margin: 5px;
   text-align: center;
-}
-
-a .fab,.fa {
   color: white;
 }
 
 .course, .skills {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  gap: 1em;
 }
 
 .course .title {
+  flex: 1 1 30%;
   color: #509e98;
-  -ms-flex: 0 0 33.3%;
-  flex: 0 0 33.3%;
-  max-width: 33%;
 }
 
 .course .descrition {
-  -ms-flex: 0 0 66.6%;
-  flex: 0 0 66.6%;
-  max-width: 66.6%;
+  flex: 1 1 65%;
 }
 
 .course .descrition p {
@@ -111,23 +112,25 @@ a .fab,.fa {
 }
 
 .skills .column {
-  -ms-flex: 0 0 50%%;
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 1 1 45%;
 }
 
-.skills .column ul, ul.job-description {
+.skills .column ul,
+ul.job-description {
   list-style-type: none;
+  padding-left: 0;
 }
 
-.skills .column ul > li:before {
+.skills .column ul > li::before {
   content: "►";
   padding-right: 0.5em;
   color: #509e98;
 }
 
-.school, .job-title {
-  text-transform: capitalize;
+ul.job-description li::before {
+  content: "✔";
+  padding-right: 0.5em;
+  color: #509e98;
 }
 
 .school span, .job-title span {
@@ -135,10 +138,16 @@ a .fab,.fa {
   text-decoration: underline;
 }
 
-ul.job-description li:before{
-  content: "✔";
-  padding-right: 0.5em;
-  color: #509e98;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1 1 45%;
+  padding: 5px;
+  position: relative;
 }
 
 .container {
@@ -147,25 +156,21 @@ ul.job-description li:before{
 }
 
 .image {
-  opacity: 1;
-  display: block;
   width: 100%;
-  height: 300PX;
-  transition: .5s ease;
-  backface-visibility: hidden;
+  height: 250px;
+  object-fit: cover;
   border-radius: 10px;
+  transition: 0.5s ease;
+  display: block;
+  opacity: 1;
 }
 
 .middle {
-  transition: .5s ease;
-  opacity: 0;
   position: absolute;
   top: 30%;
   left: 15%;
-  bottom: 50%;
-
-  /* transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); */
+  opacity: 0;
+  transition: 0.5s ease;
   text-align: center;
 }
 
@@ -179,52 +184,39 @@ ul.job-description li:before{
 
 .text {
   color: black;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: bold;
   padding: 10px;
-  font-weight: bolder;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+  background-color: rgba(255,255,255,0.85);
+  border-radius: 6px;
 }
 
 footer {
- padding: 1em 1.5em;
- background: #A7B8BF;
- color: white;
- text-align: right;
+  padding: 1em 1.5em;
+  background: #A7B8BF;
+  color: white;
+  text-align: right;
+  margin-top: 2em;
+  border-top: 2px solid #ccc;
 }
 
 @media only screen and (max-width: 768px) {
-  .course {
-    display: block;
+  .course, .skills {
+    flex-direction: column;
   }
 
-  .course .title, .course .descrition {
-    max-width: 100%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .skills {
-    display: block;
+  .skills .column,
+  .course .title,
+  .course .descrition {
+    flex: 1 1 100%;
   }
 
-  .skills .column {
-    max-width: 100%;
+  .image {
+    height: 200px;
+  }
+
+  header img {
+    max-width: 150px;
   }
 
   footer {
